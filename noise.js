@@ -13,7 +13,7 @@ const noise = (x, y) => {
     return lerp(v, lerp(u, grad(p[A], x, y), grad(p[B], x - 1, y)), lerp(u, grad(p[A + 1], x, y - 1), grad(p[B + 1], x - 1, y - 1)));
 };
 
-const fade = (t) => t * t * t * (t * (t * 6 - 15) + 10);
+const fade = (t) => t * t * (t * (t * 6 - 15) + 10);
 
 const lerp = (t, a, b) => a + t * (b - a);
 
